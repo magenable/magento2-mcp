@@ -2,6 +2,14 @@
 
 This is a Model Context Protocol (MCP) server that connects to a Magento 2 REST API, allowing Claude and other MCP clients to query product information from a Magento store.
 
+## For start:
+- in root dir run `npm install`
+- create `.env` file based on `.env.sample`
+- run `npm run start:http` or `npm run start:stdio`
+
+After starting the HTTP server, a JWT token will be generated in the console for use in the auth header.
+By default, the server address is http://localhost:3000
+
 ## Features
 
 ### Product Features
