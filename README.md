@@ -8,7 +8,7 @@ This is a Model Context Protocol (MCP) server that connects to a Magento 2 REST 
 - run `npm run start:http` or `npm run start:stdio`
 
 After starting the HTTP server, a JWT token will be generated in the console for use in the auth header.
-By default, the server address is http://localhost:3000
+By default, the server address is http://localhost:3000/mcp
 
 ## Features
 
