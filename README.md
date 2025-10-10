@@ -34,13 +34,13 @@ You can generate new token with command `npm run jwt:genearte username`
   `JWT_SECRET_KEY`= any random string. need for generate token and verify it
 
   `PORT`=3000
-- `npn run jwt:generate username`(optional) - Generate jwt token which is needed for the authorization header
-
-    Authorization: Bearer 'TOKEN'
+- `npn run jwt:generate username` - Generate jwt token which is needed for the authorization bearer header (Authorization: Bearer 'TOKEN')
 
 - `npm run start:http` or you can use [pm2](https://pm2.keymetrics.io/)
 
-The server has started. OpenAi need HTTPS connection. You can use NGINX as a reverse proxy and install a certificate, for example, via certbot
+The server has started. At startup, a JWT token will be automatically generated and displayed in the console.
+
+OpenAi need HTTPS connection and domain. You can use NGINX as a reverse proxy and install a certificate, for example, via certbot
 
 ### 2. OpenAi Agent Builder
 - Login to platform.openai.com
@@ -50,7 +50,7 @@ The server has started. OpenAi need HTTPS connection. You can use NGINX as a rev
 - Add server
 - Fill data
 
-  `URL` - your app URL
+  `URL` - https://example.com/mcp
 
   `Authentication` - Access token / API key
 
