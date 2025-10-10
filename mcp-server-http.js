@@ -34,7 +34,7 @@ app.listen(port, () => {
 
 app.use(function (err, req, res, next) {
     if (err.name === "UnauthorizedError") {
-        res.status(500).send("invalid token...");
+        res.status(401).send("invalid token...");
     } else {
         console.error('Server error:', error);
         process.exit(1);
