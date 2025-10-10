@@ -86,21 +86,13 @@ OpenAi need HTTPS connection and domain. You can use NGINX as a reverse proxy an
 - A Magento 2 instance with REST API access
 - API token for the Magento 2 instance
 
-## Installation
-
-1. Clone this repository
-2. Install dependencies:
-
-```bash
-npm install
-```
 
 ## Usage
 
 ### Running the server directly
 
 ```bash
-node mcp-server.js
+npm run start:stdio
 ```
 
 ### Testing with the test client
