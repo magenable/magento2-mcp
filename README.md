@@ -2,7 +2,7 @@
 
 This is a Model Context Protocol (MCP) server that connects to a Magento 2 REST API, allowing Claude and other MCP clients to query product information from a Magento store.
 
-## For start:
+## For quick start:
 - in root dir run `npm install`
 - create `.env` file based on `.env.sample`
 - run `npm run start:http` or `npm run start:stdio`
@@ -14,6 +14,48 @@ After starting the HTTP server, a JWT token will be generated in the console for
 By default, the server address is http://localhost:3000/mcp
 
 You can generate new token with command `npm run jwt:genearte username`
+
+## How to connect with OpenAi Agent Builder MCP
+
+### 1. deploy app
+- `git clone git@github.com:magenable/magento2-mcp.git`
+- `cd magento2-mcp`
+- `npm install`
+- `cp .env.sample .env`
+- fill .env file:
+
+  `MAGENTO_BASE_URL`=Magento REST API URL like https://example.com/rest/default/V1
+
+  `MAGENTO_API_TOKEN`= Admin token or Integration token
+    
+    *Admin token* - can be obtained via REST API https://example.com/rest/default/V1integration/admin/token. Has a default expiration time of 4 hours
+    *Integration token* - can be created on Login to Admin -> System -> Extensions -> Integrations 
+
+  `JWT_SECRET_KEY`= any random string. need for generate token and verify it
+
+  `PORT`=3000
+- `npn run jwt:generate username`(optional) - Generate jwt token which is needed for the authorization header
+
+    Authorization: Bearer 'TOKEN'
+
+- `npm run start:http` or you can use [pm2](https://pm2.keymetrics.io/)
+
+The server has started. OpenAi need HTTPS connection. You can use NGINX as a reverse proxy and install a certificate, for example, via certbot
+
+### 2. OpenAi Agent Builder
+- Login to platform.openai.com
+- Go to https://platform.openai.com/agent-builder
+- Edit Workflow
+- Add MCP workflow module
+- Add server
+- Fill data
+
+  `URL` - your app URL
+
+  `Authentication` - Access token / API key
+
+  `Add your access token` - JWT token from point 1
+
 
 ## Features
 
