@@ -7,8 +7,13 @@ This is a Model Context Protocol (MCP) server that connects to a Magento 2 REST 
 - create `.env` file based on `.env.sample`
 - run `npm run start:http` or `npm run start:stdio`
 
-After starting the HTTP server, a JWT token will be generated in the console for use in the auth header.
+After starting the HTTP server, a JWT token will be generated in the console for use in the auth header in MCP client.
+
+`Authorization: Bearer <token>`
+
 By default, the server address is http://localhost:3000/mcp
+
+You can generate new token with command `npm run jwt:genearte username`
 
 ## Features
 

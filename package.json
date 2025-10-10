@@ -6,6 +6,7 @@
   "scripts": {
     "start:http": "node generateJWT && node mcp-server-http.js",
     "start:stdio": "node mcp-server",
+    "jwt:generate": "node generateJWT",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
