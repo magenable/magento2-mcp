@@ -205,5 +205,5 @@ ISC
 
 ### Need further support, help or custom implementation?
 
-Contact Magenable- [h](https://magenable.com.au)
+Contact [Magenable](https://magenable.com.au)
 Experts in eCommerce and AI.
