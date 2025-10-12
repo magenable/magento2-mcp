@@ -1,6 +1,7 @@
 # Magento 2 MCP Server
 
 This is a Model Context Protocol (MCP) server that connects to a Magento 2 REST API, allowing Claude and other MCP clients to query product information from a Magento store.
+It is a fork of https://github.com/boldcommerce/magento2-mcp with added support of HTTP connection to MCP server, so now it can be used with remote clients like OpenAI Agent Builder
 
 ## For quick start:
 - in root dir run `npm install`
@@ -201,3 +202,8 @@ To add new tools, follow the pattern in the existing code. Each tool is defined 
 ## License
 
 ISC
+
+### Need further support, help or custom implementation?
+
+Contact Magenable- [h](https://magenable.com.au)
+Experts in eCommerce and AI.
