@@ -14,7 +14,7 @@ After starting the HTTP server, a JWT token will be generated in the console for
 
 By default, the server address is http://localhost:3000/mcp
 
-You can generate new token with command `npm run jwt:genearte username`
+You can generate new token with command `npm run jwt:generate username`
 
 ## How to connect with OpenAi Agent Builder MCP
 
@@ -35,7 +35,7 @@ You can generate new token with command `npm run jwt:genearte username`
   `JWT_SECRET_KEY`= any random string. need for generate token and verify it
 
   `PORT`=3000
-- `npn run jwt:generate username` - Generate jwt token which is needed for the authorization bearer header (Authorization: Bearer 'TOKEN')
+- `npm run jwt:generate username` - Generate jwt token which is needed for the authorization bearer header (Authorization: Bearer 'TOKEN')
 
 - `npm run start:http` or you can use [pm2](https://pm2.keymetrics.io/)
 
